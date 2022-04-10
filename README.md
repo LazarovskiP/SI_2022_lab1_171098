@@ -1,1 +1,1 @@
-# SI_2022_lab1_171098
+Pavel Lazarovski 171098
