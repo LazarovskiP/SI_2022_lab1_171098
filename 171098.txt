@@ -1,0 +1,169 @@
+1. Link до мојот профил на Github: https://github.com/LazarovskiP
+
+2. Успешно го променив името на default branch од main во master.
+
+3. Креирав репозиториум со име SI_2022_lab1_171098, го сменив во приватен и додадев README.txt file.
+линк: https://github.com/LazarovskiP/SI_2022_lab1_171098.git
+
+4. Успешно го клонирав на мојот компјутер со командата:
+
+$ git clone https://github.com/LazarovskiP/SI_2022_lab1_171098.git
+За влез во локалниот репозиториумот искористив:
+$ cd SI_2022_lab1_171098/
+
+5. За да креирам нова текстуална датотека shopping_list.txt и за commit на истата ги искористив командите
+$ nano shopping_list.txt
+$ git add shopping_list.txt
+$ git commit -m "Add 5 items to the shopping list"
+
+6. Откако им додадов количина на сите ја искористив следната команда за да ги комитнам:
+$ git commit –a –m “Add quantities to the items”
+
+7. За креирање на двете гранки во мастер ги искористив следниве команди:
+$ git checkout -b branch1
+$ git checkout master
+$ git checkout -b branch2
+
+8. Со користење на командата подолу ги добиваме следните информации:
+$ git log
+
+commit db48396e7738e217a3edae31eaf45394a3f9b857 (HEAD -> master, branch2, branch1)
+Author: Pavel Lazarovski <lazarovskipavel@yahoo.com>
+Date:   Sun Apr 10 21:58:49 2022 +0200
+
+    Add quantities to the items
+
+commit c1d76bf2736e4c5b2024b41ad2ee8bf0c4e30e97
+Author: Pavel Lazarovski <lazarovskipavel@yahoo.com>
+Date:   Sun Apr 10 21:52:32 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 8b100c5b3443fc0cfda5765188f3d23ca130141e (origin/master, origin/HEAD)
+Author: LazarovskiP <82408903+LazarovskiP@users.noreply.github.com>
+Date:   Sun Apr 10 21:11:25 2022 +0200
+
+    Update README.md
+
+commit 8a3a70520d00b4bbe8000a030a06ed4cde0a02a7
+Author: LazarovskiP <82408903+LazarovskiP@users.noreply.github.com>
+Date:   Sun Apr 10 21:10:42 2022 +0200
+
+9.Ги синхронизирав сите 3 гранки со командите:
+$ git push origin master
+$ git push origin branch1
+$ git push origin branch2
+
+10. За да се префрлам во гранката branch1 ја користам командата:
+$ git checkout branch1
+
+11. Откако ја сменив количината на 5тиот производ правам commit со следнава команда:
+$ git commit –a –m “Change quantity of item #5”
+
+12.Се враќам на гранката мастер.
+$ git checkout master
+
+13.Откако ја сменив количината на 2риот производ правам commit со следнава команда:
+$ git commit –a –m “Change quantity of item #2”
+
+14. Ги користам истите команди за повторно синхронизирање
+$ git push origin master
+$ git push origin branch1
+$ git push origin branch2
+
+15. За да се префрлам на гранката branch2 ја користам командата:
+$ git checkout branch2
+
+16. За да го променам името на производот со реден број 4 и направам commit ја користам следнава команда:
+$ git commit –a –m “Modify item #4”
+
+17. Со користење на командата:( $ git log) ги добив следниве информации:
+
+commit 1196dea7a6ffe63b3e1ddf111a7eec3646e9041b (HEAD -> branch2)
+Author: Pavel Lazarovski <lazarovskipavel@yahoo.com>
+Date:   Sun Apr 10 22:30:21 2022 +0200
+
+    Modify item #4
+
+commit db48396e7738e217a3edae31eaf45394a3f9b857 (origin/branch2)
+Author: Pavel Lazarovski <lazarovskipavel@yahoo.com>
+Date:   Sun Apr 10 21:58:49 2022 +0200
+
+    Add quantities to the items
+
+commit c1d76bf2736e4c5b2024b41ad2ee8bf0c4e30e97
+Author: Pavel Lazarovski <lazarovskipavel@yahoo.com>
+Date:   Sun Apr 10 21:52:32 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 8b100c5b3443fc0cfda5765188f3d23ca130141e
+Author: LazarovskiP <82408903+LazarovskiP@users.noreply.github.com>
+Date:   Sun Apr 10 21:11:25 2022 +0200
+
+    Update README.md
+
+commit 8a3a70520d00b4bbe8000a030a06ed4cde0a02a7
+Author: LazarovskiP <82408903+LazarovskiP@users.noreply.github.com>
+Date:   Sun Apr 10 21:10:42 2022 +0200
+
+18. Додадов 6та ставка во шопинг листата и ги commit-нав со командата:
+$ git commit –amend –a –m “Modify item #4 and add item #6”
+
+19. Со користење на командата:( $ git log) ги добив следниве информации:
+
+Author: Pavel Lazarovski <lazarovskipavel@yahoo.com>
+Date:   Sun Apr 10 22:30:21 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit db48396e7738e217a3edae31eaf45394a3f9b857 (origin/branch2)
+Author: Pavel Lazarovski <lazarovskipavel@yahoo.com>
+Date:   Sun Apr 10 21:58:49 2022 +0200
+
+    Add quantities to the items
+
+commit c1d76bf2736e4c5b2024b41ad2ee8bf0c4e30e97
+Author: Pavel Lazarovski <lazarovskipavel@yahoo.com>
+Date:   Sun Apr 10 21:52:32 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 8b100c5b3443fc0cfda5765188f3d23ca130141e
+Author: LazarovskiP <82408903+LazarovskiP@users.noreply.github.com>
+Date:   Sun Apr 10 21:11:25 2022 +0200
+
+    Update README.md
+
+commit 8a3a70520d00b4bbe8000a030a06ed4cde0a02a7
+Author: LazarovskiP <82408903+LazarovskiP@users.noreply.github.com>
+Date:   Sun Apr 10 21:10:42 2022 +0200
+
+20. За да се префрлиме во гранката master и да ја споиме истата со branch1 ги користиме следниве команди:
+$ git checkout master
+$ git commit –a –m “Merge branch1”
+$ git merge branch1
+
+21. По обид за да ги спојам гранките master и branch2 ми конзолата ми ја врати следнава порака:
+$ git merge branch2
+Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Пробав да избришам еден елемент и да ги спојам но пак ми дава конфликт.
+$ git merge --abort
+$ git commit –a –m “Merge branch2 after deleting one item”
+$ git merge branch2
+Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+22.
+
+
+
+
+
+ 
+
+
